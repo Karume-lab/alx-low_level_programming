@@ -11,3 +11,8 @@
 5-printf.c -> Write a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
 
 6-size.c -> Write a C program that prints the size of various types on the computer it is compiled and run on.
+
+
+100-intel -> Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+
+
