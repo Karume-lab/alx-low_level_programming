@@ -8,12 +8,11 @@
  */
 int main(void)
 {
-        char alpha;
+	char alpha;
 
-	for (alpha = 'z'; alpha <= 'a'; alpha--)
-		if (alpha != 'q' && alpha != 'e')
-			putchar(alpha);
+	for (alpha = 'z'; alpha >= 'a'; alpha--)
+		putchar(alpha);
 	putchar('\n');
-        return (0);
+return (0);
 }
 
