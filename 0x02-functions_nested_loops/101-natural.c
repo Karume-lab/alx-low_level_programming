@@ -9,6 +9,7 @@
 int main(void)
 {
 	int s, t, f, tm, fm;
+
 	s = 0;
 	for (t = 0; t <= (1024 / 3); t++)
 	{
