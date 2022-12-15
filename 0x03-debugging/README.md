@@ -1,1 +1,1 @@
-Manual
+MANUAL
