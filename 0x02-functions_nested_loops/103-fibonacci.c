@@ -16,12 +16,10 @@ int main(void)
 	for (d = 2; d <= 32; d++)
 	{
 		if (c % 2 == 0)
-		{
-			s = s + c;
-			a = b;
-			b = c;
-			c = a + b;
-		}
+		s = s + c;
+		a = b;
+		b = c;
+		c = a + b;
 	}
 	printf("%u\n", s);
 	return (0);
