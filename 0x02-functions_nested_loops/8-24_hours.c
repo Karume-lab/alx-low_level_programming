@@ -4,7 +4,7 @@
  *
  *Return: Always 0
  */
-oid jack_bauer(void)
+void jack_bauer(void)
 {
 	int h, m, i, j, k, l;
 

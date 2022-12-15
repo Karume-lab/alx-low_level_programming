@@ -5,7 +5,7 @@
  *
  * Return: Always 0.
  */
-nt main(void)
+int main(void)
 {
 	jack_bauer();
 	return (0);
