@@ -18,5 +18,5 @@ int main(void)
 	printf("%d\n", r);
 	r = _abs(-98);
 	printf("%d\n", r);
-	return (0);
+	eturn (0);
 }
