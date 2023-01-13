@@ -1,3 +1,12 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+void _puts(char *str);
+
+int _atoi(cont char *s);
+
+void print_int(unsigned long int n);
+
 void *malloc_checked(unsigned int b);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n);
@@ -19,3 +28,5 @@ int check_for_digits(char **av);
 void init(char *str, int l);
 
 int main(int argc, char *argv[]);
+
+#endif
