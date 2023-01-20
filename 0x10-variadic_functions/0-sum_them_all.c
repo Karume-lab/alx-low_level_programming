@@ -6,7 +6,7 @@
  * Return: The sum of the arguments
  */
 
-int sum_them_all(const unsigned int n, ...);
+int sum_them_all(const unsigned int n, ...)
 {
 	var_list args;
 	int sum = 0;
