@@ -1,9 +1,8 @@
 #include "lists.h"
 /**
- * insert_dnodeint_at_index - Adds a new node at a specific index
- * @h: A pointer to the first node
- * @idx: The index where the node is to be inserted
- * @n: The element to be added
+ * delete_dnodeint_at_index - Deletes a node at a specific index
+ * @head: A pointer to the first node
+ * @index: The index where the node is to be inserted
  * Return: A pointer to the new node
 */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
