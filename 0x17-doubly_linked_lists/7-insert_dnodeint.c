@@ -8,38 +8,47 @@
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *newNode = NULL;
 	dlistint_t *trav = *h;
-	unsigned int i = 0, j = 0;
+	dlistint_t *ptrNode = (dlistint_t *) malloc(sizeof(dlistint_t));
+	unsigned int i;
+
+	if (ptrNode == NULL)
+		return (NULL);
+	ptrNode->n = n;
 
 	if (h == NULL)
+	{
+		free(ptrNode);
 		return (NULL);
-
-	if (*h == NULL)
+	}
+	if (*h == NULL || idx == 0)
+	{
+		free(ptrNode);
 		return (add_dnodeint(h, n));
-
-	newNode = (dlistint_t *) malloc(sizeof(dlistint_t));
-	if (newNode == NULL)
-		return (NULL);
-
-	while (trav->next)
-		j++;
-	if (idx > j)
-		return (add_dnodeint_end(h, n));
-
-	newNode->n = n;
-
-	while (i <= (idx - 1))
+	}
+	
+	for (i = 0; (i < idx - 1 )&& (trav); i++)
 	{
 		trav = trav->next;
-		i++;
+	}
+	if (trav == NULL)
+	{
+		free(ptrNode);
+		return (NULL);
+	}
+	if (trav->next == NULL)
+	{
+		free(ptrNode);
+		return (add_dnodeint_end(h, n));
+	}
+	else
+	{
+		trav->next->prev = ptrNode;
+		ptrNode->prev = trav;
+		ptrNode->next = trav->next;
+		trav->next = ptrNode;
+		return (ptrNode);
 	}
 
-	trav->next = newNode;
-	newNode->prev = trav;
-	trav = trav->next;
-	newNode->next = trav;
-	trav->prev = newNode;
-
-	return (newNode);
+	return (NULL);
 }
